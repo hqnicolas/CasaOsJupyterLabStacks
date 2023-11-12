@@ -10,6 +10,7 @@
 Runing JupyterLab Notebook on CasaOS Server with aarch64
 Based on [jupyterLab Base Notebook](https://quay.io/repository/jupyter/base-notebook)
 Based on [Docker-Stacks](https://github.com/jupyter/docker-stacks)
+- [Alternative images](https://quay.io/organization/jupyter)
 - How to use:
 1. On Casaos Home.
 2. click on "+".
