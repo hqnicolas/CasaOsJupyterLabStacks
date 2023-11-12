@@ -20,8 +20,8 @@ published: "3000"
 3. Click on Terminal and Logs
 4. on Logs, Find this line:
 ```
-Running at:
-jupyterlab-jupyterlab-1  | [I 2023-11-12 10:42:05.636 ServerApp] http://localhost:8888/lab?token=c5ad99bf763ebc0
+[I 2023-11-12 19:08:57.681 ServerApp] Jupyter Server 2.10.0 is running at:
+[I 2023-11-12 19:08:57.682 ServerApp] http://7371962312567:8888/lab?token=10bba6428018b6d3f913231231
 ```
 5. Take the token from Link above.
 6. Drop the token on your JupyterLab Login Screen.
