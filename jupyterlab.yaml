@@ -1,0 +1,73 @@
+name: jupyterlab
+services:
+  jupyterlab:
+    cpu_shares: 90
+    command: []
+    deploy:
+      resources:
+        limits:
+          memory: 3973M
+    image: quay.io/jupyter/base-notebook
+    ports:
+      - target: 8888
+        published: "3000"
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /home
+        target: /home/jovyan/work
+    x-casaos:
+      envs:
+        - container: PATH
+          description:
+            en_us: ""
+        - container: LANG
+          description:
+            en_us: ""
+        - container: NODE_VERSION
+          description:
+            en_us: ""
+        - container: EDITOR
+          description:
+            en_us: ""
+        - container: SHELL
+          description:
+            en_us: ""
+      ports:
+        - container: "8888"
+          description:
+            en_us: ""
+      volumes:
+        - container: /home/jovyan/work
+          description:
+            en_us: ""
+    devices: []
+    cap_add: []
+    environment: []
+    network_mode: default
+    privileged: false
+    container_name: ""
+x-casaos:
+  architectures:
+    - arm64
+  author: CasaOS User
+  category: unknown
+  description:
+    en_us: ""
+  developer: unknown
+  hostname: ""
+  icon: https://www.gravatar.com/avatar/9172ecfc3f25bdcc7dcf9eee8e568c6b?d=blank&size=512
+  index: /
+  main: jupyterlab
+  port_map: ""
+  scheme: http
+  store_app_id: jupyterlab
+  tagline:
+    en_us: github.com/hqnicolas/CasaOsJupyterLabStacks
+  thumbnail: ""
+  tips:
+    custom: github.com/hqnicolas/CasaOsJupyterLabStacks
+  title:
+    custom: ""
+    en_us: jupyterlab
