@@ -1,15 +1,15 @@
 
 
-# CasaOs Konmeo JupyterLab Docker Compose
+# CasaOs JupyterLab Docker Stacks Oficial image Compose
 Runing JupyterLab Notebook on CasaOS Server with aarch64
-Based on [Konmeo/jupyterLab](https://hub.docker.com/r/konmeo/jupyterlab)
+Based on [jupyterLab Base Notebook](https://quay.io/repository/jupyter/base-notebook)
 - How to use:
 1. On Casaos Home.
 2. click on "+".
 3. Click on add custom image.
 4. Click on import icon.
-5. select the [JupyterLab.yaml](https://github.com/hqnicolas/CasaOsJupyterLab/blob/main/jupyterlab.yaml)
-- to change your docker external port, edit the [JupyterLab.yaml](https://github.com/hqnicolas/CasaOsJupyterLab/blob/main/jupyterlab.yaml):
+5. select the JupyterLab.yaml
+- to change your docker external port, edit the [JupyterLab.yaml](https://github.com/hqnicolas/CasaOsJupyterLabStacks/blob/main/jupyterlab.yaml)
 ```
 published: "3000"
 ```
@@ -25,11 +25,9 @@ jupyterlab-jupyterlab-1  | [I 2023-11-12 10:42:05.636 ServerApp] http://localhos
 ```
 5. Take the token from Link above.
 6. Drop the token on your JupyterLab Login Screen.
-- [This file](https://github.com/hqnicolas/CasaOsJupyterLab/blob/main/jupyterlab.yaml) is Based on Comand:
+- [This file](https://github.com/hqnicolas/CasaOsJupyterLabStacks/blob/main/jupyterlab.yaml) is Based on Comand:
 ```
-docker run -i -t -p 3000:8888 -v "$PWD":/workspace --name jupyterlab konmeo/jupyterlab /bin/bash -c "\
-jupyter lab \
---notebook-dir=/workspace --ip='*' --port=8888 \
---no-browser --allow-root"
+podman pull quay.io/jupyter/base-notebook
+docker run -it --rm -p 3000:8888 -v "${PWD}":/home/jovyan/work quay.io/jupyter/base-notebook
 ``` 
 - Your Jupiter will access your USER folder From CasaOS Linux server.
