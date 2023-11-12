@@ -1,4 +1,4 @@
-# CasaOs JupyterLab Docker Stacks Oficial image Compose
+# CasaOs JupyterLab Docker Compose
 
 [![GitHub actions badge](https://github.com/jupyter/docker-stacks/actions/workflows/docker.yml/badge.svg)
 ](https://github.com/jupyter/docker-stacks/actions/workflows/docker.yml?query=branch%3Amain "Docker images build status")
