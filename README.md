@@ -12,6 +12,12 @@ Based on [jupyterLab Base Notebook](https://quay.io/repository/jupyter/base-note
 Based on [Docker-Stacks](https://github.com/jupyter/docker-stacks)
 - [Alternative images](https://quay.io/organization/jupyter)
 - How to use:
+- install CasaOs
+```
+sudo apt-get update -y
+sudo apt-get install curl -y
+wget -qO- https://get.casaos.io/v0.4.7 | sudo bash
+```
 1. On Casaos Home.
 2. click on "+".
 3. Click on add custom image.
