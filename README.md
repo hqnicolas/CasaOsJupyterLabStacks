@@ -17,6 +17,7 @@ Based on [Docker-Stacks](https://github.com/jupyter/docker-stacks)
 sudo apt-get update -y
 sudo apt-get install curl -y
 wget -qO- https://get.casaos.io/v0.4.7 | sudo bash
+# for newer version: curl -fsSL https://get.casaos.io | sudo bash
 ```
 1. On Casaos Home.
 2. click on "+".
